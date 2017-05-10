@@ -8,6 +8,7 @@ end
 
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'instagram'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
