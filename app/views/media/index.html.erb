@@ -1,1 +1,11 @@
-<p> Media! </p>
+<h1> Welcome, <%= @user.full_name %>! </h1>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <% @images.each do |image| %>
+      <a href="#" class="thumbnail">
+        <img class='img-responsive' src='<%= image.thumbnail.url %>'>
+      </a>
+    <% end %>
+  </div>
+</div>
