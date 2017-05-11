@@ -1,3 +1,46 @@
 // Place all the styles related to the media controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@media (max-width: 374px) {
+  .gallery{
+    max-width: 170px;
+  }
+}
+@media (min-width: 375px) {
+  .gallery{
+    max-width: 330px;
+  }
+}
+@media (min-width: 535px) {
+  .gallery{
+    max-width: 490px;
+  }
+}
+@media (min-width: 695px) {
+  .gallery{
+    max-width: 650px;
+  }
+}
+@media (min-width: 855px) {
+  .gallery{
+    max-width: 810px;
+  }
+}
+
+.gallery{
+  padding-left: 10px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thumb{
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.thumb:hover{
+  outline: 2px solid #1DA1F2;
+}

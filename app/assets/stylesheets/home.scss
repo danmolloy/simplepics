@@ -1,3 +1,63 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#jumbotron{
+  padding: 0;
+  background-image: url('/images/mountain.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 65vh;
+}
+
+.layer{
+  height:100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.jumbotron-content{
+  height:100%;
+  padding-top: 15%;
+  text-align: center;
+}
+
+.jumbotron-heading{
+  color: white;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.jumbotron-btn{
+  background-color: black !important;
+  width: 300px;
+  border:none;
+  position:absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: all 0.5s ease 0s;
+
+}
+
+.jumbotron-btn:hover, .jumbotron-btn:active{
+  color:white;
+  background-color: #1DA1F2 !important;
+  border:none;
+  outline:none;
+  box-shadow:none;
+}
+
+.jumbotron-btn:focus{
+  color:white;
+  border:none;
+  outline:none;
+  box-shadow:none;
+}
+
+.textbox{
+  color: #666;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
