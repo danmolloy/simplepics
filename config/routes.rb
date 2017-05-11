@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get '/privacy', to: 'home#privacy'
   get '/auth/callback', to: 'auth#callback'
   get '/auth/connect', to: 'auth#connect'
+  delete '/logout', to: 'auth#destroy'
   get '/media', to: 'media#index'
 end

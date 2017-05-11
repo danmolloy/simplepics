@@ -6,5 +6,34 @@
 @import "media";
 
 .navbar{
+  //text-align: center;
+}
+
+.profile-pic{
+  display: inline;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.logout{
+  text-decoration: underline;
+  color: white !important;
+}
+
+.user-link{
+  padding: 0;
+}
+
+.username{
+  display: inline-block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 0;
+  color:white
+}
+
+#navbarNav{
   text-align: center;
 }

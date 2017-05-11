@@ -9,4 +9,10 @@ class AuthController < ApplicationController
     session[:access_token] = response.access_token
     redirect_to "/media"
   end
+
+  def destroy
+    session.delete(:access_token)
+    session.delete(:user_info)
+    redirect_to root_url
+  end
 end

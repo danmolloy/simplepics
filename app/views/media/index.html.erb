@@ -8,7 +8,7 @@
           <img class='img-responsive' itemprop="thumbnail" src='<%= image.thumbnail.url %>'
            height='<%= image.thumbnail.height %>' width='<%= image.thumbnail.width %>'>
         </a>
-        <figcaption hidden itemprop="caption description">This is the caption of the image.</figcaption>
+        <figcaption hidden itemprop="caption description"><%= image.caption %></figcaption>
       </figure>
     <% end %>
   </div>

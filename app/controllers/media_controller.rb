@@ -1,8 +1,9 @@
 class MediaController < ApplicationController
   before_action :require_client
   def index
-    @user = @client.user
+    @user = @client.user.to_h
     @images = APIMediaParser.new(media: get_user_media).images
+    p @images
   end
 
 
@@ -12,7 +13,9 @@ class MediaController < ApplicationController
   end
 
   def initialize_client
+    return false unless session[:access_token]
     @client ||= Instagram.client(access_token: session[:access_token])
+    session[:user_info] = @client.user
   end
 
   def require_client

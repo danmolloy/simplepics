@@ -1,3 +1,22 @@
-<nav id='header' class='navbar bg-inverse text-white'>
-  <a class='navbar-brand text-white' href='/'>SIMPLEPICS</a>
+<nav id='header' class='navbar navbar-inverse navbar-toggleable bg-inverse text-white'>
+  <a class='navbar-brand' href='/'>SIMPLEPICS</a>
+
+  <% if @user %>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse navbar-right" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item user-item">
+          <a class='nav-link user-link' href='media'>
+            <img class='profile-pic' src='<%= @user['profile_picture'] %>'>
+            <span class="username align-middle"><%= @user['full_name'] %></span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Log out', {controller: 'auth', action: 'destroy'}, class: 'nav-link logout', method: :delete %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
 </nav>
