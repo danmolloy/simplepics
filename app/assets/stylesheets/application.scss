@@ -1,4 +1,6 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "photoswipe";
+@import "default-skin";
 @import "bootstrap";
 
 .navbar{

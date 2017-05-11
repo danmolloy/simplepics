@@ -5,10 +5,15 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
+
 
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'instagram'
+gem 'photoswipe-rails'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

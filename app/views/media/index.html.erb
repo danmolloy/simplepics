@@ -1,13 +1,22 @@
 <h1> Welcome, <%= @user.full_name %>! </h1>
 
+
 <div class='container'>
-  <div class="row">
-    <% @images.each do |image| %>
-      <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-        <a href="#" class="thumbnail">
-          <img class='img-responsive' src='<%= image.thumbnail.url %>'>
+  <div class="row gallery">
+    <% @images.each_with_index do |image, index| %>
+      <!-- <div class="col-lg-3 col-md-4 col-xs-6 thumb"> -->
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="<%= image.standard_res.url %>" class="thumbnail"
+           data-size='<%= "#{image.standard_res.width}x#{image.standard_res.height}" %>'
+           itemprop="contentUrl" data-index='<%= index %>'>
+          <img class='img-responsive' itemprop="thumbnail" src='<%= image.thumbnail.url %>'
+           height='<%= image.thumbnail.height %>' width='<%= image.thumbnail.width %>'>
         </a>
-      </div>
+        <figcaption itemprop="caption description"><%= image.caption %></figcaption>
+      </figure>
+      <!-- </div> -->
     <% end %>
   </div>
 </div>
+
+<%= render "shared/photoswipe" %>
