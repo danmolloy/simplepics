@@ -1,4 +1,4 @@
-class APIMediaParser
+class APIParser
   include ActiveModel::Model
   attr_accessor :media
 
@@ -23,7 +23,7 @@ class APIMediaParser
         image['images'] = media['images']
         simplify_image(image)
       end
-    end
+    end.compact
   end
 
   def is_image?(media)
@@ -31,11 +31,12 @@ class APIMediaParser
   end
 
   def images
+    return nil unless @media
     JSON.parse(@media.to_json).select{|m| is_image?(m)}.map do |media|
       case media['type']
         when 'image'    then simplify_image(media)
         when 'carousel' then simple_images_from_carousel(media)
       end
-    end.flatten.compact
+    end.flatten
   end
 end

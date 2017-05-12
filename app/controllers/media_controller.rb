@@ -2,8 +2,7 @@ class MediaController < ApplicationController
   before_action :require_client
   def index
     @user = @client.user.to_h
-    @images = APIMediaParser.new(media: get_user_media).images
-    p @images
+    @images = APIParser.new(media: get_user_media).images
   end
 
 
