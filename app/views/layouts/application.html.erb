@@ -4,13 +4,15 @@
     <title><%= @title || 'Simplepics'%></title>
     <%= csrf_meta_tags %>
     <meta name='description' content='A simple picture viewing app for Instagram.'/>
-    <link rel='icon' href='images/favicon.png'>
+    <link rel='icon' href='favicon.ico'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
   <body>
     <%= render 'shared/header' %>
+    <%= render 'shared/flash' %>
+
     <%= yield %>
   </body>
   <%= javascript_include_tag 'application' %>

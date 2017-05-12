@@ -5,6 +5,27 @@
 @import "home";
 @import "media";
 
+.alert{
+  text-align: center;
+  position: absolute;
+  top:60px;
+  left: 0;
+  right: 0;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 6px;
+  background-color:#5DADE2;
+  padding:0.5em 0.3em;
+  color:white;
+  font-size:1em;
+  font-weight:bold;
+  z-index: 1000;
+}
+
+.alert-error{
+  background-color: #E74C3C;
+}
+
 .navbar{
   //text-align: center;
 }
