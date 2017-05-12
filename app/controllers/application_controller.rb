@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  rescue_from Instagram::BadRequest, with: :bad_request
   rescue_from Instagram::Error, with: :generic_error
+  rescue_from Instagram::BadRequest, with: :bad_request
 
   private
   def bad_request(exception)
