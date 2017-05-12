@@ -10,7 +10,7 @@ The following environment variables must be added to an intializer to be loaded 
 
 # Video Tour
 
-[https://www.youtube.com/watch?v=9tEplMA6EUM](https://www.youtube.com/watch?v=9tEplMA6EUM)
+[https://www.youtube.com/watch?v=upuZhrfhzho](https://www.youtube.com/watch?v=upuZhrfhzho)
 
 # Design
 
