@@ -8,7 +8,9 @@ The following environment variables must be added to an intializer to be loaded 
 
 - ENV['INSTAGRAM_REDIRECT_URI']
 
+# Video Tour
 
+[https://www.youtube.com/watch?v=upuZhrfhzho](https://www.youtube.com/watch?v=upuZhrfhzho)
 
 # Design
 
