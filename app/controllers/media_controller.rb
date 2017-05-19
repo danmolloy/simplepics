@@ -18,6 +18,9 @@ class MediaController < ApplicationController
   end
 
   def require_client
-    redirect_to root_url unless initialize_client
+    unless initialize_client
+      flash[:error] = "You must connect with Instagram to view your Gallery."
+      redirect_to root_url
+    end
   end
 end
